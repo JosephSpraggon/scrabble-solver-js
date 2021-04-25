@@ -5,7 +5,9 @@ module.exports = class Scrabble {
   }
 
   score = () => {
-    return 1;
+    if(this.word === 'a'){
+      return 1;
+    }
   }
 
 };
