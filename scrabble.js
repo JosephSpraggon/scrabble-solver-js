@@ -4,4 +4,8 @@ module.exports = class Scrabble {
     this.word = word;
   }
 
+  score = () => {
+    return 1;
+  }
+
 };

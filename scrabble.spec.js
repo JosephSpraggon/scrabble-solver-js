@@ -18,7 +18,7 @@ describe('Score function', () => {
 
   test('a should return a score of 1', () => {
     var test = new Scrabble('a')
-    expect(test.score).toEqual(1);
+    expect(test.score()).toEqual(1);
   })
 
 })
