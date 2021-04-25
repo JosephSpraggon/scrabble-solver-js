@@ -2,12 +2,15 @@ module.exports = class Scrabble {
 
   constructor(word) {
     this.word = word;
+    this.points = 0
   }
 
   score = () => {
-    if(this.word === 'a'){
-      return 1;
+    var letters = this.word.split("")
+    if(letters.includes('a')){
+      this.points += 1
     }
+    return this.points;
   }
 
 };
