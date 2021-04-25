@@ -8,7 +8,7 @@ module.exports = class Scrabble {
   score = () => {
     let letters = this.word.split("")
     for (let i = 0; i < letters.length; i++) {
-      if(letters[i] == 'a') {
+      if(letters[i] == ('a' || 'e' || 'i')) {
         this.points += 1
       }
     }

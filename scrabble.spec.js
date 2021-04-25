@@ -8,8 +8,8 @@ describe('Scrabble class', () => {
   })
 
   test('should hold a word as a property', () => {
-    var test = new Scrabble('test')
-    expect(test.word).toEqual('test')
+    let test = new Scrabble('test');
+    expect(test.word).toEqual('test');
   })
 
 })
@@ -17,8 +17,18 @@ describe('Scrabble class', () => {
 describe('Score function', () => {
 
   test('a should return a score of 1', () => {
-    var test = new Scrabble('a')
+    let test = new Scrabble('a');
     expect(test.score()).toEqual(1);
+  })
+
+  test('aa should return a score of 2', () => {
+    let test = new Scrabble('aa');
+    expect(test.score()).toEqual(2);
+  })
+
+  test('cabbage should return a score of 14', () => {
+    let cabbage = new Scrabble('cabbage');
+    expect(cabbage.score()).toEqual(14);
   })
 
 })
