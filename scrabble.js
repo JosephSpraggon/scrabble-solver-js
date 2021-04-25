@@ -6,9 +6,11 @@ module.exports = class Scrabble {
   }
 
   score = () => {
-    var letters = this.word.split("")
-    if(letters.includes('a')){
-      this.points += 1
+    let letters = this.word.split("")
+    for (let i = 0; i < letters.length; i++) {
+      if(letters[i] == 'a') {
+        this.points += 1
+      }
     }
     return this.points;
   }
