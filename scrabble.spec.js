@@ -41,4 +41,44 @@ describe('Score function', () => {
     expect(test.score()).toEqual(2);
   })
 
+  test('dog should return 5', () => {
+    let test = new Scrabble('dog');
+    expect(test.score()).toEqual(5);
+  })
+
+  test('cap should return 7', () => {
+    let test = new Scrabble('cap');
+    expect(test.score()).toEqual(7);
+  })
+
+  test('how should return 9', () => {
+    let test = new Scrabble('how');
+    expect(test.score()).toEqual(9);
+  })
+
+  test('ok should return 6', () => {
+    let test = new Scrabble('ok');
+    expect(test.score()).toEqual(6);
+  })
+
+  test('jax should return 17', () => {
+    let test = new Scrabble('jax');
+    expect(test.score()).toEqual(17);
+  })
+
+  test('zq should return 20', () => {
+    let test = new Scrabble('zq');
+    expect(test.score()).toEqual(20);
+  })
+
+  test('cabbage should return 14', () => {
+    let test = new Scrabble('cabbage');
+    expect(test.score()).toEqual(14);
+  })
+
+  test('OXYPHENBUTAZONE should return 41', () => {
+    let test = new Scrabble('OXYPHENBUTAZONE');
+    expect(test.score()).toEqual(41);
+  })
+
 })
