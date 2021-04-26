@@ -39,7 +39,7 @@ And to total:
 scrabble = Scrabble.new('')
 scrabble.score # => 0
 
-scrabble = Scrabble.new(" \t\n")
+scrabble = Scrabble.new("")
 scrabble.score # => 0
 
 scrabble = Scrabble.new(nil)
