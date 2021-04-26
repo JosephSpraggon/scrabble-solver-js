@@ -3,13 +3,9 @@ module.exports = class Scrabble {
   constructor(word) {
     this.word = word;
     this.points = 0;
-    this.onePointers = ['a', 'e', 'i','o','u','l','n','r','s','t'];
-    this.twoPointers = ['d', 'g'];
-    this.threePointers = ['b', 'c', 'm', 'p'];
-    this.fourPointers = ['f', 'h', 'v', 'w', 'y'];
-    this.fivePointers = ['k'];
-    this.eightPointers = ['j', 'x'];
-    this.tenPointers = ['q', 'z'];
+    this.dictionary= {'a':1, 'e':1, 'i':1, 'o':1, 'u':1, 'l':1, 'n':1, 'r':1, 's':1, 't':1,
+    'd':2, 'g':2, 'b':3, 'c':3, 'm':3, 'p':3, 'f':4, 'h':4, 'v':4, 'w':4, 'y':4,
+  'k':5, 'j':8, 'x':8, 'q':10, 'z':10}
   }
 
   score = () => {
@@ -17,21 +13,7 @@ module.exports = class Scrabble {
       return 0};
     let letters = this.word.toLowerCase().split("");
     for (let i = 0; i < letters.length; i++) {
-      if(this.onePointers.includes(letters[i])){
-        this.points += 1
-      } if(this.twoPointers.includes(letters[i])){
-        this.points += 2
-      } if(this.threePointers.includes(letters[i])){
-        this.points += 3
-      } if(this.fourPointers.includes(letters[i])){
-        this.points += 4
-      } if(this.fivePointers.includes(letters[i])){
-        this.points += 5
-      } if(this.eightPointers.includes(letters[i])){
-        this.points += 8
-      } if(this.tenPointers.includes(letters[i])){
-        this.points += 10
-      }
+      this.points += this.dictionary[letters[i]]
     }
     return this.points;
   }
