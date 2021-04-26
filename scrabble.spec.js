@@ -26,6 +26,11 @@ describe('Score function', () => {
     expect(test.score()).toEqual(2);
   })
 
+  test('should expect uppercase letters', () => {
+    let test = new Scrabble('AA');
+    expect(test.score()).toEqual(2);
+  })
+
   test('aeioulnrst should return 10', () => {
     let test = new Scrabble('aeioulnrst');
     expect(test.score()).toEqual(10);

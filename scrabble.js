@@ -6,7 +6,7 @@ module.exports = class Scrabble {
   }
 
   score = () => {
-    let letters = this.word.split("")
+    let letters = this.word.toLowerCase().split("");
     for (let i = 0; i < letters.length; i++) {
       if(letters[i] == 'a' || letters[i] == 'e' || letters[i] == 'i' || letters[i] == 'o' || letters[i] == 'u' || letters[i] == 'l' || letters[i] == 'n' || letters[i] == 'r' || letters[i] == 's' || letters[i] == 't') {
         this.points += 1
