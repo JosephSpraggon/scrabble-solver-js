@@ -81,4 +81,14 @@ describe('Score function', () => {
     expect(test.score()).toEqual(41);
   })
 
+  test('" " should return 0', () => {
+    let test = new Scrabble(' ');
+    expect(test.score()).toEqual(0);
+  })
+
+  test('nil should return 0', () => {
+    let test = new Scrabble(null);
+    expect(test.score()).toEqual(0);
+  })
+
 })

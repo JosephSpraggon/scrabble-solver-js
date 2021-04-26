@@ -12,9 +12,9 @@ module.exports = class Scrabble {
     this.tenPointers = ['q', 'z'];
   }
 
-
-
   score = () => {
+    if(this.word == null){
+      return 0};
     let letters = this.word.toLowerCase().split("");
     for (let i = 0; i < letters.length; i++) {
       if(this.onePointers.includes(letters[i])){
