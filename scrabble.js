@@ -9,7 +9,7 @@ module.exports = class Scrabble {
   }
 
   score = () => {
-    if(this.word == null){
+    if(typeof this.word != "string" || this.word == " " || this.word == " \t\n"){
       return 0};
     let letters = this.word.toLowerCase().split("");
     for (let i = 0; i < letters.length; i++) {
