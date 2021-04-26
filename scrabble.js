@@ -2,8 +2,9 @@ module.exports = class Scrabble {
 
   constructor(word) {
     this.word = word;
-    this.points = 0
+    this.points = 0;
     this.onePointers = ['a', 'e', 'i','o','u','l','n','r','s','t'];
+    this.twoPointers = ['d', 'g'];
   }
 
 
@@ -13,6 +14,8 @@ module.exports = class Scrabble {
     for (let i = 0; i < letters.length; i++) {
       if(this.onePointers.includes(letters[i])){
         this.points += 1
+      } if(this.twoPointers.includes(letters[i])){
+        this.points += 2
       }
     }
     return this.points;

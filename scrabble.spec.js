@@ -36,4 +36,9 @@ describe('Score function', () => {
     expect(test.score()).toEqual(10);
   })
 
+  test('d should return 2', () => {
+    let test = new Scrabble('d');
+    expect(test.score()).toEqual(2);
+  })
+
 })
