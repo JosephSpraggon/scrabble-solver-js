@@ -12,9 +12,9 @@ module.exports = class Scrabble {
     if(typeof this.word != "string" || this.word == " " || this.word == " \t\n"){
       return 0};
     let letters = this.word.toLowerCase().split("");
-    for (let i = 0; i < letters.length; i++) {
-      this.points += this.dictionary[letters[i]]
-    }
+    letters.forEach((letter) => {
+      this.points += this.dictionary[letter]
+    })
     return this.points;
   }
 
